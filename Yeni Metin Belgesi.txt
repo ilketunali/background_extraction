@@ -1,0 +1,22 @@
+function  a = lvqi( mat,test,noron,hata,it)
+%function a = lvqi(mat,noron,hata,it)
+%
+% IN:  mat = eðitim matrisi
+%      test = test veri seti
+%      noron = aðýn kohonnen katmanýndaki nöron sayýsý
+%      hata = eðitimi durduracak hata oraný
+%      it = eðitimi durduracak iterasyon sayýsý
+% OUT: a = 
+if exist('hata')==0 
+hata=0;
+end
+
+if exist('it')==0
+    it=Inf;
+end
+
+maks=max(mat(:));
+min=min(mat(:));
+mid=(maks+min)/2;
+g_sayisi=size(mat,1); %feature sayýsý(giriþ sayýsý)
+v_sayisi=size(mat,2); %veri sayýsý
